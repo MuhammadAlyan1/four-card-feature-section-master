@@ -1,0 +1,225 @@
+/* 
+============
+root 
+============ 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--very-light-gray);
+}
+/* 
+============
+header 
+============ 
+*/
+header {
+  margin: 40px;
+  text-align: center;
+}
+
+header #reliable {
+  font-weight: 200;
+  color: var(--grayish-blue);
+}
+
+header #technology {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+header #ai {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+/* 
+============
+container 
+============ 
+*/
+
+.container {
+  margin: 40px;
+}
+
+/* 
+============
+card 
+============ 
+*/
+.card {
+  box-shadow: 1px 1px 30px rgba(128, 128, 128, 0.466);
+  background-color: white;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.card h1 {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+
+.card p {
+  font-weight: 400;
+  color: var(--grayish-blue);
+}
+
+/* 
+============
+supervisor 
+============ 
+*/
+
+.supervisor {
+  border-top: 5px solid var(--cyan);
+}
+
+/* 
+============
+team-builder 
+============ 
+*/
+
+.team-builder {
+  border-top: 5px solid var(--red);
+}
+
+/* 
+============
+karma 
+============ 
+*/
+.karma {
+  border-top: 5px solid var(--orange);
+}
+
+/* 
+============
+calculator 
+============ 
+*/
+.calculator {
+  border-top: 5px solid var(--blue);
+}
+
+/* 
+============
+Mobile layout
+============ 
+*/
+
+@media (max-width: 600px) {
+  header {
+    margin: 20px;
+  }
+
+  .container {
+    margin: 20px;
+  }
+
+  header #reliable {
+    margin-top: 5rem;
+    font-size: 26px;
+  }
+
+  header #technology {
+    font-size: 26px;
+  }
+
+  header #ai {
+    margin-bottom: 5rem;
+  }
+
+  .card h1 {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 1rem 2rem;
+  }
+}
+
+/* 
+==============
+desktop layout
+==============
+*/
+
+@media (min-width: 1100px) {
+  .container {
+    padding-left: 12%;
+    padding-right: 12%;
+    display: grid;
+    grid-template-areas:
+      "supervisor team-builder calculator"
+      "supervisor karma calculator";
+
+    grid-gap: 2rem;
+  }
+
+  .card img {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .card {
+    min-height: 250px;
+    max-width: 350px;
+  }
+
+  .supervisor {
+    grid-area: supervisor;
+    margin: auto 0;
+  }
+
+  .team-builder {
+    grid-area: team-builder;
+    margin-bottom: 0px;
+  }
+
+  .karma {
+    grid-area: karma;
+  }
+
+  .calculator {
+    grid-area: calculator;
+    margin: auto 0;
+  }
+
+  header #reliable {
+    color: var(--very-dark-blue);
+    font-size: 32px;
+    font-weight: 200;
+  }
+
+  header #technology {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  header {
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+}
